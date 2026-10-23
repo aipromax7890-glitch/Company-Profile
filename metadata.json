@@ -1,0 +1,6 @@
+{
+  "name": "UrbanNusaCyber",
+  "description": "UrbanNusaCyber — Konsultan & Layanan Keamanan Siber, Penetration Testing, Network Security, dan Pengembangan Web Profesional 2026.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #0A0A09;
+    --bg-secondary: #11110F;
+    --surface: #171714;
+    --surface-hover: #1F1F1B;
+    --gold-primary: #C7A34B;
+    --gold-light: #E0C477;
+    --gold-dark: #917531;
+    --gold-border: rgba(199, 163, 75, 0.22);
+    --gold-border-hover: rgba(224, 196, 119, 0.45);
+    --text-primary: #F4F2EC;
+    --text-secondary: #A5A39A;
+    --text-muted: #6B6960;
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    scroll-behavior: smooth;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0A0A09;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #252420;
+    border-radius: 4px;
+    border: 1px solid rgba(199, 163, 75, 0.15);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #38362F;
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Subtle background cyber grid */
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(199, 163, 75, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(199, 163, 75, 0.035) 1px, transparent 1px);
+}
+
+.cyber-grid-dense {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(199, 163, 75, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(199, 163, 75, 0.04) 1px, transparent 1px);
+}
+
+/* Gold glow accent */
+.gold-glow {
+  box-shadow: 0 0 35px -5px rgba(199, 163, 75, 0.18);
+}
+
+.gold-glow-subtle {
+  box-shadow: 0 4px 20px -2px rgba(199, 163, 75, 0.10);
+}
+
+.gold-border {
+  border-color: rgba(199, 163, 75, 0.22);
+}
+
+.gold-border-interactive {
+  border-color: rgba(199, 163, 75, 0.22);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.gold-border-interactive:hover {
+  border-color: rgba(224, 196, 119, 0.5);
+  box-shadow: 0 8px 30px -8px rgba(199, 163, 75, 0.15);
+}
